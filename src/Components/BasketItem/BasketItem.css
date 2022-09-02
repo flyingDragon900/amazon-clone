@@ -1,0 +1,52 @@
+.BasketItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.BasketItem .bi_left {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin: 0 1.5rem;
+}
+.BasketItem .bi_left img {
+  width: 100%;
+}
+.bi_right {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.bi_right h2 {
+  text-align: left;
+}
+.bi_right p strong {
+  font-size: 1.4rem;
+}
+.bi_right p small {
+  font-size: 1.4rem;
+}
+.bi_right > p {
+  margin: 10px 0;
+}
+.bi_right .rating {
+  display: flex;
+  margin: 16px 0;
+}
+.bi_right > button {
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  background-color: rgb(245, 192, 35);
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1.1rem;
+}
+.bi_right > button:hover {
+  background-color: rgb(255, 215, 93);
+}

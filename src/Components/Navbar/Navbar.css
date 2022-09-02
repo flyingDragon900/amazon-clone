@@ -1,0 +1,81 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 2rem;
+  background: #232f3e;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.navbar .nl {
+  object-fit: contain;
+  display: flex;
+  color: white;
+}
+.navbar .nl img {
+  width: 100px;
+  object-fit: contain;
+}
+.navbar .nlr {
+  display: flex;
+  flex-direction: column;
+}
+.navbar .nlr small {
+  text-align: center;
+}
+.navbar .nlr strong {
+  margin-right: 12px;
+}
+
+.navbar .nm {
+  flex: 1;
+  display: flex;
+  width: 100%;
+}
+.navbar .nm span {
+  display: flex;
+  background: rgb(220 167 9);
+  padding: 5px;
+  border-radius: 0 6px 6px 0;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .nm input {
+  width: 100%;
+  border-radius: 6px 0 0 6px;
+}
+.nr {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nr .nno {
+  display: flex;
+  margin-right: 15px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.nr .nno:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nr .nno:last-child span {
+  margin: 0 5px;
+}
+strong {
+  margin-top: 5px;
+  font-weight: 700;
+  font-size: 13px;
+}
+.nr .nno:nth-child(1) {
+  margin-left: 10px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}

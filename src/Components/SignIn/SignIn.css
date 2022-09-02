@@ -1,0 +1,50 @@
+.signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.signin__container {
+  height: 400px;
+  width: 300px;
+  background-color: #fff;
+  /* box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.7);
+   */
+  padding: 1rem;
+  border: 1px solid rgb(193, 193, 193);
+}
+.signin__container h1 {
+  margin-bottom: 1rem;
+}
+.signin__container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.signin__container form label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.signin__container form input {
+  padding: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+.signin__container form input[type="button"] {
+  background-color: gold;
+  cursor: pointer;
+}
+.signin__container p,
+button {
+  width: 100%;
+}
+.signin__container p a {
+  color: blue;
+}
+.signin__container p {
+  margin: 0 0 1rem 0;
+}
+.signin__container button {
+  padding: 0.4rem;
+  cursor: pointer;
+}
