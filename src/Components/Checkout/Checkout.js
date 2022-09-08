@@ -5,9 +5,12 @@ import { useStateValue } from '../StateProvider'
 import BasketItem from '../BasketItem/BasketItem'
 import { getBasketTotal } from '../reducer'
 
-const Checkout = () => {
+import { useNavigate } from 'react-router-dom'
 
-  const [{ basket }] = useStateValue()
+const Checkout = () => {
+  const navigate = useNavigate()
+
+  const [{ basket, user }] = useStateValue()
 
   return (
     <>
@@ -15,12 +18,13 @@ const Checkout = () => {
         <div className="ct_left">
           <div className="ct_left_heading">
             <h2>Your shopping Cart</h2>
+            <h3>Hello, {user?.email.split("@")[0]}</h3>
           </div>
 
           {/* CheckOutProduct */}
           <div className="ct_left_checkoutproduct">
             {
-              basket.map(item => (
+              basket?.map(item => (
                 <BasketItem
                   img={item.img}
                   title={item.title}
@@ -45,7 +49,7 @@ const Checkout = () => {
               renderText={(value) => (
                 <>
                   <h4>Subtotal</h4>
-                  <span>({basket.length} item)</span>
+                  <span>({basket?.length} item)</span>
                   :
                   <strong>{value}</strong>
                   <div className="ct_right_middle_chbk">
@@ -63,7 +67,7 @@ const Checkout = () => {
             />
           </div>
           <div className="ct_right_bottom">
-            <button>
+            <button onClick={e => { navigate('/payment') }}>
               Proceed to Buy
             </button>
           </div>

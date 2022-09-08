@@ -5,11 +5,17 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import SearchIcon from '@material-ui/icons/Search';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import { useStateValue } from '../StateProvider';
+import { auth } from '../firebase';
 
 const Navbar = () => {
 
-  const [{ basket }] = useStateValue()
-
+  const [{ basket, user }, dispatch] = useStateValue()
+  // console.log(user.email);
+  const handleAuth = () => {
+    if (user) {
+      auth.signOut()
+    }
+  }
   return (
     <div className="navbar">
       <div className="nl">
@@ -28,11 +34,11 @@ const Navbar = () => {
       <div className="nr">
         <div className="nno nnl">
           <small>Hello</small>
-          <strong>Guest</strong>
+          <strong><span>{user ? user?.email.split('@')[0] : 'Guest'}</span></strong>
         </div>
-        <div className="nno nnsl">
-          <Link to='/signin'>
-            <small>Hello, Sign in</small></Link>
+        <div className="nno nnsl" onClick={handleAuth}>
+          <Link to={!user && '/signin'}>
+            <small>Hello, <span>{user ? 'Sign Out' : 'Sign in'}</span></small></Link>
           <strong>Account & Lists</strong>
         </div>
         <div className="nno nnsr">
@@ -41,7 +47,7 @@ const Navbar = () => {
         </div>
         <div className="nno nnr">
           <Link to={'/checkout'}><ShoppingCartIcon /></Link>
-          <span>{basket.length}</span>
+          <span>{basket?.length}</span>
         </div>
       </div>
     </div>

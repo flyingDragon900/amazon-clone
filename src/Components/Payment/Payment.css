@@ -1,0 +1,39 @@
+.payment {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+.payment h1 {
+  text-align: center;
+  font-weight: 500;
+  padding: 14px 0;
+}
+.payment h1 a {
+  color: #4e6b88;
+}
+.payment__section {
+  background-color: #fff;
+  border-bottom: 1px solid grey;
+
+  padding: 0 2rem;
+}
+.dilivery__info {
+  display: flex;
+  padding: 15px 0;
+}
+.dilivery__title {
+  flex: 0.3;
+}
+.dilivery__user {
+  flex: 0.7;
+  margin-left: 2rem;
+}
+.item__info {
+  display: flex;
+}
+.item__title {
+  flex: 0.3;
+}
+.item__products {
+  flex: 0.7;
+}

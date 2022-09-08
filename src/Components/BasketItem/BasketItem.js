@@ -4,7 +4,7 @@ import './BasketItem.css'
 
 const BasketIetm = (props) => {
 
-    const [{ basket }, dispatch] = useStateValue()
+    const [{ basket, user }, dispatch] = useStateValue()
     // console.log(basket);
     const removeFromBasket = () => {
         dispatch({
